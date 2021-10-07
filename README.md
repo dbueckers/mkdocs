@@ -8,3 +8,7 @@ date: 2021-10-07
 
 # MkDocs Sample Configurtion
 
+# ToDo
+
+* How to use templates
+* Overwriting (partial) theme files
