@@ -1,0 +1,104 @@
+site_name: Dokumentation
+site_url:
+site_description: Dokumentation der Konfiguration von "MkDocs"
+site_author: Detlev Bückers
+copyright: Copyright &copy; 2021 Detlev Bueckers.
+
+repo_url: https://github.com/dbueckers/mkdocs/
+repo_name: GitHub
+
+extra:
+  version: 1.0
+  social:
+    - icon: fontawesome/regular/envelope
+      link: mailto:bueckers@c4-it.de
+      name: E-Mail
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/dbueckers
+      name: LinkedIn
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/dbueckers
+      name: Instagram
+    - icon: fontawesome/brands/github
+      link: https://github.com/dbueckers
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/dbueckers
+      name: Twitter
+
+nav:
+ - Home: index.md
+ - Rechtliches:
+   - Datenschutz: legal/datenschutz.md
+   - Impressum: legal/impressum.md
+ - C4 Informationstechnik: https://www.c4-it.de/
+
+# theme:
+#   name: mkdocs
+#   highlightjs: true
+#   nav_style: dark
+#   locale: de
+#   custom_dir: themes/mkdocs
+
+theme:
+  name: material
+  language: de
+  features:
+  #   - navigation.indexes
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+  palette: 
+    primary: green
+    accent: orange
+    scheme: slate # instead of 'default'
+#   logo: assets/img/logo.png
+  icon:
+    logo: material/library
+#   font:
+#    text: IBM Plex Sans
+#    code: IBM Plex Mono
+  font: false
+  favicon: assets/img/favicon.png
+  custom_dir: themes/material
+
+extra_css:
+  - assets/css/extended.css
+
+extra_javascript:
+  - assets/js/extended.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_templates:
+
+# 'true' for server installations and
+# 'false' for local file system installations
+use_directory_urls: false
+
+plugins:
+  - search:
+      lang: de
+#   - social:
+#       cards_color:
+#         fill: "#0FF1CE"
+#         text: "#FFFFFF"
+#  - tags:
+#      tags_file: tags.md
+
+markdown_extensions:
+  - abbr
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - smarty
+#   - pymdownx.emoji:
+#       emoji_index: !!python/name:materialx.emoji.twemoji
+#       emoji_generator: !!python/name:materialx.emoji.to_svg#   - toc:
+#   - toc
+#       permalink: True
+#       separator: "_"
+  - pymdownx.snippets
+
+
+
+dev_addr: '127.0.0.1:8080'
